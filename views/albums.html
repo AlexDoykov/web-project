@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<script>
+function myFunction() 
+{
+
+  var checkBox = document.getElementById("postcard");
+  var text = document.getElementById("postcardinfo");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true)
+  {
+    text.style.display = "block";
+  } 
+  else 
+  {
+    text.style.display = "none";
+  }
+}
+
+function myFunction1() 
+{
+
+  var checkBox = document.getElementById("calendar");
+  var text = document.getElementById("calendarinfo");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true)
+  {
+    text.style.display = "block";
+  } 
+  else 
+  {
+    text.style.display = "none";
+  }
+}
+function myFunction2() 
+{
+
+  var checkBox = document.getElementById("cup");
+  var text = document.getElementById("cupinfo");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true)
+  {
+    text.style.display = "block";
+  } 
+  else 
+  {
+    text.style.display = "none";
+  }
+}
+
+function myFunction3() {
+
+  var checkBox = document.getElementById("bridge");
+  var text = document.getElementById("bridgeinfo");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true)
+  {
+    text.style.display = "block";
+  } 
+  else 
+  {
+    text.style.display = "none";
+  }
+}
+</script>
+</head>
+<body>
+
+<form>
+Отбележете желаете ли фото-албум.
+<input type ="checkbox" id="album" name="album"> ДА! <input type ="checkbox" id="noalbum" name="noalbum"> НЕ!<br><br>
+Искате да получите снимките в нестандартен вариант? Може да изберете от следните опции.<br><br>
+<input type ="checkbox" id="postcard" name="postcard" onclick="myFunction()" >Картичка<br><br>
+<div id="postcardinfo" style="display:none">
+	<input type ="number" id="count" name="count" placeholder="Брой"> 
+	Бележки:
+	<input type="text" id="notespc"name="notes">
+	<br><br>
+</div>
+<input type ="checkbox" id="calendar" name="calendar" onclick="myFunction1()" >Календар <br><br>
+<div id="calendarinfo" style="display:none">
+	<input type ="number" id="count" name="count" placeholder="Брой"> 
+	Бележки:
+	<input type="text" id="notespc"name="notes">
+	<br><br>
+</div>
+<input type ="checkbox" id="cup" name="cup" onclick="myFunction2()" >Чаша <br><br>
+<div id="cupinfo" style="display:none">
+	<input type ="number" id="count" name="count" placeholder="Брой"> 
+	Бележки:
+	<input type="text" id="notespc"name="notes">
+	<br><br>
+</div>
+<input type ="checkbox" id="bridge" name="bridge" onclick="myFunction3()" >Карти за бридж <br><br>
+<div id="bridgeinfo" style="display:none">
+	<input type ="number" id="count" name="count" placeholder="Брой"> 
+	Бележки:
+	<input type="text" id="notespc"name="notes">
+	<br><br>
+</div>
+<input id="submit"  type="submit" value="Изпрати">
+</form>
+
+</body>
+<html>
