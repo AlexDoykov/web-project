@@ -53,7 +53,8 @@ function myFunction2()
   }
 }
 
-function myFunction3() {
+function myFunction3() 
+{
 
   var checkBox = document.getElementById("bridge");
   var text = document.getElementById("bridgeinfo");
@@ -68,13 +69,14 @@ function myFunction3() {
     text.style.display = "none";
   }
 }
+
 </script>
 </head>
 <body>
 
 <form>
 Отбележете желаете ли фото-албум.
-<input type ="checkbox" id="album" name="album"> ДА! <input type ="checkbox" id="noalbum" name="noalbum"> НЕ!<br><br>
+<input type = "radio"  name="album" value="yes"> ДА! <input type = "radio"  name="album" value="no">НЕ!<br><br>
 Искате да получите снимките в нестандартен вариант? Може да изберете от следните опции.<br><br>
 <input type ="checkbox" id="postcard" name="postcard" onclick="myFunction()" >Картичка<br><br>
 <div id="postcardinfo" style="display:none">

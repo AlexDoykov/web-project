@@ -2,22 +2,21 @@
 
 class Person
 {
-    public $firstname;
-    public $lastname;
-    public $email;
-    public $password;
-    public $group;
-    public $potok;
-    public $specialty;
-    public $graduation_year;
+    private $firstname;
+    private $lastname;
+    private $email;
+    private $password;
+    private $group;
+    private $potok;
+    private $specialty;
+    private $graduation_year;
 
-
-    function __construct($firstname,$lastname,$email,$password,$group,$potok,$specialty,$graduation_year) 
+    function __construct($firstname, $lastname, $email, $password, $group, $potok, $specialty, $graduation_year) 
     {
         $this->firstname = $firstname;
         $this->lastname = $lastname;
         for ($i = 0; $i < 10000; $i++) {
-            $password=$password->md5;
+            $password=md5($password);
         }
         $this->password = $password;
         $this->email= $email;
@@ -57,7 +56,17 @@ class Person
      {
          return $this->graduation_year;
      }
-        
+    
+
+    function save(){
+        try {
+            echo 'sqlite:localhost'.$_SERVER['DOCUMENT_ROOT'].'web_project/webprojectdb.sql';
+            $myPDO = new PDO('sqlite:'.$_SERVER['DOCUMENT_ROOT'].'web_project/webprojectdb.sql');
+            echo "Connection is successfull";
+        } catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
 }
 
 

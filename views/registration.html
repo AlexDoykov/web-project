@@ -5,19 +5,44 @@
 </head>
 <body>
 
-		<form id="registration" form action="register.php" method="post" >
-           
-                <input  id="fname" type="text" name="firstname" placeholder="Име"> <br> <br>
-				<input  id="lname" type="text" name="lastname" placeholder="Фамилия"> <br> <br>
-                <input  id="mail"  type="text" name="e-mail" placeholder="E-mail"> <br> <br>
-                <input  id="pass" type="password" name="password" placeholder="Парола"> <br> <br>
-                <input  id="repeatpass" type="password" name="repeatpassword" placeholder="Повтори паролата"> <br> <br>
-                <input  id="group" type="number" name="group" placeholder="Група" min="1" max="8"> <br> <br>
-				<input  id="potok" type="number" 	name="potok" placeholder ="Поток" min="1" max="2"> <br> <br>
-				<input  id="spec"  type = "text"	name="spec"	placeholder="Специалност">	<br> <br>
-				<input  id="vip"  type = "number"	name="vip"	placeholder="Випуск" min="2000" max="2100"> <br> <br>
-                <input id="submit"  type="submit" value="Регистрация">
+	<form id="registration" action="../controllers/registration.php" method="post" >
+		
+		Име:<br>
+        <input  required id="firstName" type="text" name="firstName" placeholder="Име" > <br>
+        <span class="error" style="color:red">  </span><br>
+
+		Фамилия: <br>
+		<input   required id="lastName" type="text" name="lastName" placeholder="Фамилия" > <br>
+		<span class="error" style="color:red">  </span><br>
+
+		E-mail: <br>
+		<input   required id="email"  type="text" name="email" placeholder="E-mail" > <br>
+		<span class="error" style="color:red">  </span><br>
+
+		Парола:<br>
+		<input  id="password" type="password" name="password" placeholder="Парола" required> <br>
+		<span class="error" style="color:red"> </span><br>
+
+		Повтори паролата:<br>
+        <input  id="repeatPassword" type="password" name="repeatPassword" placeholder="Повтори паролата" required><br>
+		<span class="error" style="color:red">  </span><br>
+
+		Група:<br>
+		<input  required id="group" type="number" name="group" placeholder="Група" min="1" max="8" > <br> <br>
+
+		Поток:<br>
+		<input  required id="stream" type="number" 	name="stream" placeholder ="Поток" min="1" max="2" > <br> <br>
+		
+		Специалност:<br>
+		<input  required id="subject"  type = "text"	name="subject"	placeholder="Специалност" >	<br>
+		<span class="error" style="color:red"> </span><br>
+		
+		Випуск:<br>
+		<input required id="graduation"  type = "number"	name="graduation"	placeholder="Випуск" min="2000" max="2100" > <br> <br>
+		
+		<input id="submit"  type="submit" value="Регистрация">
             
-        </form>
+    </form>
+</body>
 </body>
 </html>  
